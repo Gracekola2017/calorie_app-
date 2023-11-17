@@ -1,0 +1,18 @@
+{% extends “base.html” %}
+
+{% block content %}  
+<h2>Add Food Item</h2>
+<form action="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <label for="name">Food Name:</label>
+        <input type="text" class="form-control" id="name" name="calorie_count" required>
+     </div>
+<div class ="form-group">
+    <label for="calorie_count">Calorie Count:</label>
+    <input type="number" class="form-control" id="calorie_count" name="calorie_count" required>
+</div>
+<button type="submit" class="btn btn-primary">Add Food</button>
+</form>
+    {% endblock %}
+    

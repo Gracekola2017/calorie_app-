@@ -1,0 +1,25 @@
+{% extends 'base.html %'}
+
+{% block content %}
+<h2>Food List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Food Name</th>
+            <th>Calorie Count</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for food in foods %}
+        <tr>
+            <td>{{ food.name }}</td>
+            <td>{{ food.calorie_count }}</td>
+            <td>
+                <a href="{% url 'delete_food' 'food.id'}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{$ endblock %}

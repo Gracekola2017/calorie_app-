@@ -1,0 +1,19 @@
+{% load bootstrap4 %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}My Site{% endblock %}</title>
+    <!-- common CSS files -->
+    {% bootstrap_css %}
+</head>
+<body>
+    {% block content %}
+    <!-- content specific to child templates -->
+    {% endblock %}
+    <!-- common JavaScript files -->
+    {% bootstrap_javascript %}
+</body>
+</html>
+
